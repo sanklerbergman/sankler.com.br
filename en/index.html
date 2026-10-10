@@ -54,7 +54,7 @@
             <p class="lead">I'm Sankler Bergman. I build software for deliveries, field service and sales.</p>
             <div class="actions">
               <a class="btn btn-primary" href="#projects">See the projects <span class="icon icon-down" aria-hidden="true"></span></a>
-              <a class="btn" href="mailto:contato@sankler.com.br?subject=Contact%20from%20the%20website">contato@sankler.com.br</a>
+              <a class="btn" href="mailto:contato@sankler.com.br?subject=Contact%20from%20the%20website&amp;body=Company%3A%20%0D%0AWhat%20you%20do%3A%20%0D%0AHow%20you%20run%20operations%20today%3A%20%0D%0A">contato@sankler.com.br</a>
             </div>
           </div>
           <nav class="index" aria-labelledby="title-status">
@@ -62,18 +62,9 @@
             <ol class="index-list">
               <li><a href="#logistica"><span class="index-n">01</span><span class="index-t">Logística Local &amp; Rotas</span><span class="index-s">In production</span></a></li>
               <li><a href="#scanner"><span class="index-n">02</span><span class="index-t">Scanner Doc</span><span class="index-s">Live</span></a></li>
-              <li><a href="#empilhaburguer"><span class="index-n">03</span><span class="index-t">EmpilhaBurguer</span><span class="index-s">In development</span></a></li>
             </ol>
           </nav>
         </div>
-      </section>
-
-      <section class="row" aria-label="Logística Local &amp; Rotas dashboard">
-        <div class="row-label row-label-quiet"><p class="field">In use</p></div>
-        <figure class="shot">
-          <img src="../assets/img/painel-escuro.webp" width="1440" height="900" alt="Delivery dispatch dashboard: live map of Cuiabá with drivers and deliveries, next to the list of orders waiting for a driver" fetchpriority="high">
-          <figcaption>Logística Local &amp; Rotas dashboard with fictitious data in Cuiabá, Brazil. The interface is in Portuguese.</figcaption>
-        </figure>
       </section>
 
       <section id="projects" class="row" aria-labelledby="title-projects">
@@ -92,7 +83,7 @@
                 </div>
                 <p>Last-mile delivery for carriers and retailers in Mato Grosso, Brazil. It connects, in real time, the dispatcher, the driver and the customer.</p>
                 <p class="links"><a class="go" href="https://github.com/sanklerbergman/logistica-local-rotas-case/blob/main/README.en.md">Read the case study</a></p>
-                <p class="note">Private code. Screenshots use fictitious data.</p>
+                <p class="note">Private code. Screenshots use fictitious data in Cuiabá and Várzea Grande, Brazil. The interface is in Portuguese.</p>
               </div>
               <ul class="lines">
                 <li>Customer PIN and proof of delivery with photo, GPS and signature, against “marked as delivered, but I never got it”.</li>
@@ -101,8 +92,16 @@
                 <li>Pix following the Central Bank standard, and a wallet for self-employed (MEI) drivers.</li>
               </ul>
             </div>
-            <figure class="item-media bare">
-              <img src="../assets/img/celulares-escuro.webp" width="1600" height="1129" loading="lazy" alt="Three phone screens: order tracking with the confirmation PIN, the driver's list of stops, and the MEI wallet with balance and annual cap">
+            <figure class="item-media">
+              <picture>
+                <source media="(max-width: 760px)" srcset="../assets/img/painel-escuro-mapa.webp" width="912" height="768">
+                <img src="../assets/img/painel-escuro.webp" width="1440" height="900" alt="Delivery dispatch dashboard: live map of Cuiabá and Várzea Grande with drivers, deliveries and orders waiting for a driver" fetchpriority="high">
+              </picture>
+            </figure>
+            <figure class="item-media-end phones">
+              <img src="../assets/img/celular-rastreio-escuro.webp" width="533" height="1129" loading="lazy" alt="Order tracking on the customer's phone, with the PIN that confirms receipt">
+              <img src="../assets/img/celular-paradas-escuro.webp" width="534" height="1129" loading="lazy" alt="The driver's list of stops, with the address and buttons to navigate with Waze or Google Maps">
+              <img src="../assets/img/celular-carteira-escuro.webp" width="533" height="1129" loading="lazy" alt="The self-employed (MEI) driver's wallet, with the balance for Pix withdrawal and the annual revenue cap">
             </figure>
           </article>
 
@@ -168,7 +167,7 @@
           <p class="contact-q">Does your operation run on WhatsApp and spreadsheets?</p>
           <p class="contact-text">Tell me how it works today. I'll show you the systems running and help you figure out what to solve first.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="mailto:contato@sankler.com.br?subject=Contact%20from%20the%20website">contato@sankler.com.br</a>
+            <a class="btn btn-primary" href="mailto:contato@sankler.com.br?subject=Contact%20from%20the%20website&amp;body=Company%3A%20%0D%0AWhat%20you%20do%3A%20%0D%0AHow%20you%20run%20operations%20today%3A%20%0D%0A">contato@sankler.com.br</a>
             <a class="btn" href="https://www.linkedin.com/in/sankler-bergman-64962511b/">Message me on LinkedIn</a>
             <a class="btn" href="https://github.com/sanklerbergman">View GitHub</a>
           </div>
@@ -178,7 +177,7 @@
 
     <footer class="row foot">
       <div class="row-label"><p>© 2026 Sankler Bergman</p></div>
-      <div class="foot-text"><p>No cookies. Visits counted by Cloudflare Web Analytics.</p><p class="version">v1.3.0</p></div>
+      <div class="foot-text"><p>No cookies. Visits counted by Cloudflare Web Analytics.</p><p class="version">v1.4.0</p></div>
     </footer>
   </div>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7807c7852e47422086e274342e7d65ed"}'></script><!-- End Cloudflare Web Analytics -->

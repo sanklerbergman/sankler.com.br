@@ -53,7 +53,7 @@ body {
 
 ::selection { background: var(--brand); color: var(--on-brand); }
 
-img { display: block; max-width: 100%; height: auto; }
+img, picture { display: block; max-width: 100%; height: auto; }
 
 a {
   color: inherit;
@@ -240,12 +240,6 @@ section { scroll-margin-top: 12px; }
 .index-s { color: var(--stamp); font-size: 0.82rem; font-weight: 650; font-stretch: 80%; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 3px; }
 .index-list a:hover .index-t { color: var(--spot); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 
-/* Em uso */
-
-.shot { padding: var(--pad); }
-.shot img { border: 1px solid var(--spot-rule); }
-figcaption { color: var(--ink-soft); font-size: 0.9rem; margin-top: 12px; }
-
 /* Projetos: cada um é um item da OS, com a imagem encostada nas linhas. */
 
 .item {
@@ -264,11 +258,19 @@ figcaption { color: var(--ink-soft); font-size: 0.9rem; margin-top: 12px; }
   line-height: 1; text-align: center;
 }
 .item-slim .item-n { grid-row: auto; }
+.item:has(.item-media-end) .item-n { grid-row: span 3; }
 
 .item-media { grid-column: 2; grid-row: 1; border-bottom: 1px solid var(--spot-rule); }
 .item-media img { width: 100%; }
 /* A captura do Scanner Doc termina logo abaixo da área de envio, sem texto cortado. */
 .item-media.crop-top img { aspect-ratio: 1280 / 540; object-fit: cover; object-position: top; }
+
+/* A segunda imagem do item fecha o item, depois do texto que ela mostra. */
+.item-media-end { grid-column: 2; grid-row: 3; border-top: 1px solid var(--spot-rule); }
+
+/* Os três celulares lado a lado; no celular viram uma faixa que corre para o lado. */
+.phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.phones img { width: 100%; }
 
 .item-body { grid-column: 2; grid-row: 2; padding: var(--pad); }
 .item-slim .item-body { grid-row: 1; }
@@ -439,9 +441,20 @@ figcaption { color: var(--ink-soft); font-size: 0.9rem; margin-top: 12px; }
   .actions .btn { flex: 1 1 100%; }
 
   .item { grid-template-columns: 3rem minmax(0, 1fr); }
-  .item-media { grid-column: 1 / -1; }
+  .item-media, .item-media-end { grid-column: 1 / -1; }
   .item-n { grid-row: 2; font-size: 1.5rem; padding-top: 22px; }
   .item-slim .item-n { grid-row: 1; }
+  .item:has(.item-media-end) .item-n { grid-row: 2; }
+
+  .phones {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+  }
+  .phones img { flex: 0 0 80%; width: 80%; scroll-snap-align: center; }
+  .phones:focus-visible { outline-offset: -2px; }
 
   .steps { grid-template-columns: 1fr; }
   .steps li + li { border-left: 0; border-top: 1px solid var(--spot-rule); }

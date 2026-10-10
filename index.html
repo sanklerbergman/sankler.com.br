@@ -54,7 +54,7 @@
             <p class="lead">Sou Sankler Bergman. Desenvolvo sistemas para entregas, serviços de campo e vendas.</p>
             <div class="actions">
               <a class="btn btn-primary" href="#projetos">Conheça os projetos <span class="icon icon-down" aria-hidden="true"></span></a>
-              <a class="btn" href="mailto:contato@sankler.com.br?subject=Contato%20pelo%20site">contato@sankler.com.br</a>
+              <a class="btn" href="mailto:contato@sankler.com.br?subject=Contato%20pelo%20site&amp;body=Empresa%3A%20%0D%0AO%20que%20voc%C3%AAs%20fazem%3A%20%0D%0AComo%20controlam%20a%20opera%C3%A7%C3%A3o%20hoje%3A%20%0D%0A">contato@sankler.com.br</a>
             </div>
           </div>
           <nav class="index" aria-labelledby="titulo-situacao">
@@ -62,18 +62,9 @@
             <ol class="index-list">
               <li><a href="#logistica"><span class="index-n">01</span><span class="index-t">Logística Local &amp; Rotas</span><span class="index-s">Em produção</span></a></li>
               <li><a href="#scanner"><span class="index-n">02</span><span class="index-t">Scanner Doc</span><span class="index-s">No ar</span></a></li>
-              <li><a href="#empilhaburguer"><span class="index-n">03</span><span class="index-t">EmpilhaBurguer</span><span class="index-s">Em desenvolvimento</span></a></li>
             </ol>
           </nav>
         </div>
-      </section>
-
-      <section class="row" aria-label="Painel do Logística Local &amp; Rotas">
-        <div class="row-label row-label-quiet"><p class="field">Em uso</p></div>
-        <figure class="shot">
-          <img src="assets/img/painel-escuro.webp" width="1440" height="900" alt="Painel da central de entregas: mapa de Cuiabá em tempo real com motoristas e entregas, ao lado da lista de pedidos aguardando motorista" fetchpriority="high">
-          <figcaption>Painel do Logística Local &amp; Rotas, com dados fictícios em Cuiabá e Várzea Grande.</figcaption>
-        </figure>
       </section>
 
       <section id="projetos" class="row" aria-labelledby="titulo-projetos">
@@ -92,7 +83,7 @@
                 </div>
                 <p>Entregas de última milha para transportadoras e lojas de Mato Grosso. Junta, em tempo real, quem despacha, quem entrega e quem recebe.</p>
                 <p class="links"><a class="go" href="https://github.com/sanklerbergman/logistica-local-rotas-case">Ler o estudo de caso</a></p>
-                <p class="note">Código privado. As imagens usam dados fictícios.</p>
+                <p class="note">Código privado. As imagens usam dados fictícios em Cuiabá e Várzea Grande.</p>
               </div>
               <ul class="lines">
                 <li>PIN do cliente e comprovante com foto, GPS e assinatura contra o “entregue, mas não recebi”.</li>
@@ -101,8 +92,16 @@
                 <li>Pix no padrão do Banco Central e carteira do motorista MEI.</li>
               </ul>
             </div>
-            <figure class="item-media bare">
-              <img src="assets/img/celulares-escuro.webp" width="1600" height="1129" loading="lazy" alt="Três telas de celular: rastreio do pedido com PIN, lista de paradas do motorista e carteira MEI com saldo e limite anual">
+            <figure class="item-media">
+              <picture>
+                <source media="(max-width: 760px)" srcset="assets/img/painel-escuro-mapa.webp" width="912" height="768">
+                <img src="assets/img/painel-escuro.webp" width="1440" height="900" alt="Painel da central de entregas: mapa de Cuiabá e Várzea Grande em tempo real, com motoristas, entregas e pedidos aguardando motorista" fetchpriority="high">
+              </picture>
+            </figure>
+            <figure class="item-media-end phones">
+              <img src="assets/img/celular-rastreio-escuro.webp" width="533" height="1129" loading="lazy" alt="Rastreio do pedido no celular do cliente, com o PIN que confirma o recebimento">
+              <img src="assets/img/celular-paradas-escuro.webp" width="534" height="1129" loading="lazy" alt="Lista de paradas do motorista, com o endereço e os botões para navegar pelo Waze ou pelo Google Maps">
+              <img src="assets/img/celular-carteira-escuro.webp" width="533" height="1129" loading="lazy" alt="Carteira do motorista MEI, com o saldo para saque por Pix e o limite anual de faturamento">
             </figure>
           </article>
 
@@ -168,7 +167,7 @@
           <p class="contact-q">Sua operação vive no WhatsApp e na planilha?</p>
           <p class="contact-text">Me conte como ela funciona hoje. Mostro os sistemas rodando e penso com você no que resolver primeiro.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="mailto:contato@sankler.com.br?subject=Contato%20pelo%20site">contato@sankler.com.br</a>
+            <a class="btn btn-primary" href="mailto:contato@sankler.com.br?subject=Contato%20pelo%20site&amp;body=Empresa%3A%20%0D%0AO%20que%20voc%C3%AAs%20fazem%3A%20%0D%0AComo%20controlam%20a%20opera%C3%A7%C3%A3o%20hoje%3A%20%0D%0A">contato@sankler.com.br</a>
             <a class="btn" href="https://www.linkedin.com/in/sankler-bergman-64962511b/">Falar no LinkedIn</a>
             <a class="btn" href="https://github.com/sanklerbergman">Ver o GitHub</a>
           </div>
@@ -178,7 +177,7 @@
 
     <footer class="row foot">
       <div class="row-label"><p>© 2026 Sankler Bergman</p></div>
-      <div class="foot-text"><p>Sem cookies. Visitas contadas pelo Cloudflare Web Analytics.</p><p class="version">v1.3.0</p></div>
+      <div class="foot-text"><p>Sem cookies. Visitas contadas pelo Cloudflare Web Analytics.</p><p class="version">v1.4.0</p></div>
     </footer>
   </div>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7807c7852e47422086e274342e7d65ed"}'></script><!-- End Cloudflare Web Analytics -->

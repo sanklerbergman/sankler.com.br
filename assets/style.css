@@ -1,5 +1,6 @@
 /* sankler.com.br: uma folha só. A página é um talão de ordem de serviço:
-   o laranja imprime a grade e os rótulos, o preto é o que foi preenchido. */
+   o azul da marca imprime a grade e os rótulos, o branco é o que foi preenchido.
+   Sempre no tema escuro. */
 
 @font-face {
   font-family: "Archivo";
@@ -11,37 +12,23 @@
 }
 
 :root {
-  --desk: #e9e8e4;
-  --paper: #ffffff;
-  --ink: #171412;
-  --ink-soft: #4d4843;
-  --spot: #b4500f;
-  --spot-strong: #8f3c07;
-  --spot-rule: #ecd2c1;
-  --spot-wash: #fbf1ea;
-  --stamp: #24358a;
-  --on-spot: #ffffff;
+  --desk: #050608;
+  --paper: #0b0c10;
+  --ink: #f2f3f7;
+  --ink-soft: #a6abbb;
+  --brand: #3a63ff;
+  --brand-strong: #2a4ff0;
+  --on-brand: #ffffff;
+  --line: #3a63ff;
+  --spot: #6382ff;
+  --spot-rule: #1c2754;
+  --spot-wash: #121a3a;
+  --stamp: #f2f3f7;
   --sheet: 1600px;
   --label: 13.5rem;
   --pad: clamp(20px, 2.4vw, 32px);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --desk: #0c0b0a;
-    --paper: #161412;
-    --ink: #f2eee8;
-    --ink-soft: #bab2a9;
-    --spot: #ef8a4c;
-    --spot-strong: #f6a571;
-    --spot-rule: #47301f;
-    --spot-wash: #241a13;
-    --stamp: #a9b6ff;
-    --on-spot: #1a0f08;
-    color-scheme: dark;
-  }
+  color-scheme: dark;
 }
 
 *,
@@ -51,7 +38,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  scrollbar-color: var(--spot) var(--desk);
+  scrollbar-color: var(--brand) var(--desk);
 }
 
 body {
@@ -64,7 +51,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-::selection { background: var(--spot); color: var(--on-spot); }
+::selection { background: var(--brand); color: var(--on-brand); }
 
 img { display: block; max-width: 100%; height: auto; }
 
@@ -85,10 +72,10 @@ figure { margin: 0; }
 .skip {
   position: absolute; left: 12px; top: -60px; z-index: 10;
   padding: 10px 14px;
-  background: var(--spot); color: var(--on-spot); font-weight: 650; text-decoration: none;
+  background: var(--brand); color: var(--on-brand); font-weight: 650; text-decoration: none;
 }
 .skip:focus { top: 12px; }
-.skip:hover { color: var(--on-spot); }
+.skip:hover { color: var(--on-brand); }
 
 /* Rótulo impresso: a voz do talão. */
 
@@ -108,22 +95,22 @@ figure { margin: 0; }
   max-width: var(--sheet);
   margin-inline: auto;
   background: var(--paper);
-  border-inline: 1px solid var(--spot);
+  border-inline: 1px solid var(--line);
 }
 
 @media (min-width: 1664px) {
-  .sheet { margin-block: 32px; border-block: 1px solid var(--spot); }
+  .sheet { margin-block: 32px; border-block: 1px solid var(--line); }
 }
 
 .row {
   display: grid;
   grid-template-columns: var(--label) minmax(0, 1fr);
-  border-top: 1px solid var(--spot);
+  border-top: 1px solid var(--line);
 }
 
 .row-label {
   padding: var(--pad);
-  border-right: 1px solid var(--spot);
+  border-right: 1px solid var(--line);
 }
 
 .label-note { color: var(--ink-soft); font-size: 0.9rem; margin-top: 6px; }
@@ -143,15 +130,17 @@ section { scroll-margin-top: 12px; }
   grid-template-columns: auto 1fr;
   column-gap: 12px;
   align-content: center;
+  align-items: center;
   padding: 18px var(--pad);
-  border-right: 1px solid var(--spot);
+  border-right: 1px solid var(--line);
   color: var(--ink);
   text-decoration: none;
 }
 .brand:hover { color: var(--ink); }
-.brand svg { grid-row: span 2; width: 40px; height: 40px; align-self: center; }
-.brand-name { font-size: 1.45rem; font-weight: 800; font-stretch: 92%; letter-spacing: -0.02em; line-height: 1.05; }
-.brand-sub { color: var(--ink-soft); font-size: 0.8rem; font-stretch: 80%; line-height: 1.3; }
+.brand img { width: 40px; height: 40px; align-self: center; }
+.brand-name { font-size: 1.35rem; font-weight: 800; font-stretch: 118%; letter-spacing: -0.01em; line-height: 1.05; }
+/* O subtítulo só cabe numa linha no celular, onde a marca tem a largura toda. */
+.brand-sub { display: none; color: var(--ink-soft); font-size: 0.8rem; font-stretch: 80%; line-height: 1.3; }
 
 .nav {
   display: flex;
@@ -171,7 +160,7 @@ section { scroll-margin-top: 12px; }
 .order {
   display: flex; flex-direction: column; justify-content: center; align-items: flex-end;
   padding: 14px var(--pad);
-  border-left: 1px solid var(--spot);
+  border-left: 1px solid var(--line);
   text-align: right;
 }
 .order-no {
@@ -212,15 +201,15 @@ section { scroll-margin-top: 12px; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   min-height: 48px; padding: 12px 20px;
-  border: 1px solid var(--spot);
+  border: 1px solid var(--line);
   background: transparent; color: var(--ink);
   font-size: 1rem; font-weight: 700; font-stretch: 88%; letter-spacing: 0.01em;
   text-decoration: none;
   transition: background-color 0.18s var(--ease-out), color 0.18s var(--ease-out);
 }
 .btn:hover { background: var(--spot-wash); color: var(--ink); }
-.btn-primary { background: var(--spot); color: var(--on-spot); }
-.btn-primary:hover { background: var(--spot-strong); color: var(--on-spot); }
+.btn-primary { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+.btn-primary:hover { background: var(--brand-strong); color: var(--on-brand); }
 
 .icon {
   display: inline-block; flex: none; width: 1em; height: 1em;
@@ -233,7 +222,7 @@ section { scroll-margin-top: 12px; }
 .index {
   display: flex; flex-direction: column;
   padding: clamp(28px, 4vw, 56px) var(--pad) var(--pad);
-  border-left: 1px solid var(--spot);
+  border-left: 1px solid var(--line);
 }
 .index-list { list-style: none; margin: 14px 0 0; padding: 0; border-top: 1px solid var(--spot-rule); }
 .index-list li { border-bottom: 1px solid var(--spot-rule); }
@@ -263,7 +252,7 @@ figcaption { color: var(--ink-soft); font-size: 0.9rem; margin-top: 12px; }
   display: grid;
   grid-template-columns: 4.75rem minmax(0, 1fr);
 }
-.item + .item { border-top: 1px solid var(--spot); }
+.item + .item { border-top: 1px solid var(--line); }
 
 .item-n {
   grid-row: span 2;
@@ -365,12 +354,12 @@ figcaption { color: var(--ink-soft); font-size: 0.9rem; margin-top: 12px; }
 .row-stub::before {
   content: "";
   position: absolute; left: 0; right: 0; top: -15px; height: 4px;
-  background: radial-gradient(circle, var(--spot) 1.6px, transparent 2.1px) 0 50% / 11px 4px repeat-x;
+  background: radial-gradient(circle, var(--line) 1.6px, transparent 2.1px) 0 50% / 11px 4px repeat-x;
 }
 .row-stub::after {
   content: "";
   position: absolute; left: 0; right: 0; top: 0;
-  border-top: 1px solid var(--spot);
+  border-top: 1px solid var(--line);
 }
 
 .contact { padding: clamp(28px, 4vw, 56px) var(--pad); }
@@ -386,7 +375,8 @@ figcaption { color: var(--ink-soft); font-size: 0.9rem; margin-top: 12px; }
 
 .foot { color: var(--ink-soft); font-size: 0.9rem; }
 .foot .row-label { padding-block: 20px; }
-.foot-text { padding: 20px var(--pad); }
+.foot-text { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 20px var(--pad); }
+.version { font-variant-numeric: tabular-nums; }
 
 /* O carimbo bate quando o item chega à tela. Sem suporte, ele já está lá. */
 
@@ -411,9 +401,8 @@ figcaption { color: var(--ink-soft); font-size: 0.9rem; margin-top: 12px; }
 @media (max-width: 1080px) {
   :root { --label: 10.5rem; }
   .hero { grid-template-columns: 1fr; }
-  .index { border-left: 0; border-top: 1px solid var(--spot); padding-top: var(--pad); }
+  .index { border-left: 0; border-top: 1px solid var(--line); padding-top: var(--pad); }
   .item { grid-template-columns: 4rem minmax(0, 1fr); }
-  .brand-sub { display: none; }
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .steps li:nth-child(3) { border-left: 0; }
   .steps li:nth-child(n + 3) { border-top: 1px solid var(--spot-rule); }
@@ -439,11 +428,11 @@ figcaption { color: var(--ink-soft); font-size: 0.9rem; margin-top: 12px; }
   .head { grid-template-columns: 1fr auto; }
   .brand { border-right: 0; padding-block: 14px; }
   .brand-sub { display: block; }
-  .brand svg { width: 34px; height: 34px; }
+  .brand img { grid-row: span 2; width: 34px; height: 34px; }
   .brand-name { font-size: 1.3rem; }
   .order { padding-block: 12px; }
   .order-no { font-size: 2rem; }
-  .nav { grid-column: 1 / -1; grid-row: 2; border-top: 1px solid var(--spot); padding: 2px 6px; justify-content: space-between; }
+  .nav { grid-column: 1 / -1; grid-row: 2; border-top: 1px solid var(--line); padding: 2px 6px; justify-content: space-between; }
   .nav a { padding: 0 8px; font-size: 0.8rem; }
 
   .hero-main { padding-top: 28px; }

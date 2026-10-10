@@ -6,8 +6,8 @@
   <title>Sankler Bergman · Sistemas para a operação de pequenas e médias empresas</title>
   <meta name="description" content="Desenvolvo sistemas para entregas, serviços de campo e vendas de pequenas e médias empresas, com painel web, app de celular e Pix, a partir das dores reais de quem usa.">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#12100e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#e9e8e4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c0b0a" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://sankler.com.br/">
   <link rel="alternate" hreflang="pt-BR" href="https://sankler.com.br/">
   <link rel="alternate" hreflang="en" href="https://sankler.com.br/en/">
@@ -22,173 +22,173 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="top">
-    <div class="wrap">
+  <div class="sheet">
+    <header class="head">
       <a class="brand" href="./" aria-label="Sankler, página inicial">
         <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#b4500f"/><path d="M42.5 21.5c-2.4-2.6-6-4-10.2-4-6.6 0-11 3.5-11 8.5 0 4.7 3.7 6.7 9.8 8l2.8.6c3.6.8 5 1.8 5 3.6 0 2.2-2.5 3.8-6.3 3.8-3.9 0-7-1.6-8.9-4.3l-4.4 3.5c2.8 3.9 7.7 6.3 13.2 6.3 7.2 0 12.1-3.6 12.1-9.2 0-4.7-3.4-7.1-10.2-8.5l-2.8-.6c-3.2-.7-4.5-1.6-4.5-3.3 0-2 2.1-3.4 5.3-3.4 2.9 0 5.4 1 7 2.9z" fill="#fff"/></svg>
-        sankler
+        <span class="brand-name">sankler</span>
+        <span class="brand-sub">Desenvolvimento de sistemas</span>
       </a>
       <nav class="nav" aria-label="Principal">
-        <a class="hide-sm" href="#projetos">Projetos</a>
-        <a class="hide-sm" href="#como-trabalho">Como trabalho</a>
-        <a class="hide-sm" href="#contato">Contato</a>
-        <a class="lang" href="en/" hreflang="en" lang="en">English</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#como-trabalho">Como trabalho</a>
+        <a href="#contato">Contato</a>
+        <a href="en/" hreflang="en" lang="en">English</a>
       </nav>
-    </div>
-  </header>
+      <p class="order"><span class="field">Ordem de serviço</span> <span class="order-no"><span class="order-sign">Nº</span> 0001</span></p>
+    </header>
 
-  <main id="conteudo">
-    <section class="hero" aria-labelledby="titulo">
-      <div class="wrap">
-        <p class="eyebrow">Sankler Bergman · desenvolvedor de sistemas</p>
-        <h1 id="titulo">Sistemas para a operação de pequenas e médias empresas.</h1>
-        <p class="lead">Entregas, serviços de campo e vendas, com painel web, app de celular e Pix. Antes de escrever código, levanto o que as pessoas reclamam no Reclame Aqui, em fóruns e em avaliações de concorrentes. Cada funcionalidade responde a uma dessas dores.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://github.com/sanklerbergman/logistica-local-rotas-case">Ver o estudo de caso</a>
-          <a class="btn btn-ghost" href="#contato">Falar comigo</a>
-        </div>
-        <figure class="shot-hero">
-          <div class="browser">
-            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-            <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="assets/img/painel-escuro.webp">
-              <img src="assets/img/painel.webp" width="1440" height="900" alt="Painel da central de entregas: mapa de Cuiabá em tempo real com motoristas e entregas, ao lado da lista de pedidos aguardando motorista" fetchpriority="high">
-            </picture>
+    <main id="conteudo">
+      <section class="row" aria-labelledby="titulo">
+        <div class="row-label row-label-quiet"><p class="field">Serviço</p></div>
+        <div class="hero">
+          <div class="hero-main">
+            <h1 id="titulo">Sistemas que saem do código e entram na rotina.</h1>
+            <p class="lead">Sou Sankler Bergman. Desenvolvo sistemas para entregas, serviços de campo e vendas.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#projetos">Conheça os projetos <span class="icon icon-down" aria-hidden="true"></span></a>
+              <a class="btn" href="mailto:contato@sankler.com.br?subject=Contato%20pelo%20site">contato@sankler.com.br</a>
+            </div>
           </div>
+          <nav class="index" aria-labelledby="titulo-situacao">
+            <p class="field" id="titulo-situacao">Situação</p>
+            <ol class="index-list">
+              <li><a href="#logistica"><span class="index-n">01</span><span class="index-t">Logística Local &amp; Rotas</span><span class="index-s">Em produção</span></a></li>
+              <li><a href="#scanner"><span class="index-n">02</span><span class="index-t">Scanner Doc</span><span class="index-s">No ar</span></a></li>
+              <li><a href="#empilhaburguer"><span class="index-n">03</span><span class="index-t">EmpilhaBurguer</span><span class="index-s">Em desenvolvimento</span></a></li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <section class="row" aria-label="Painel do Logística Local &amp; Rotas">
+        <div class="row-label row-label-quiet"><p class="field">Em uso</p></div>
+        <figure class="shot">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="assets/img/painel-escuro.webp">
+            <img src="assets/img/painel.webp" width="1440" height="900" alt="Painel da central de entregas: mapa de Cuiabá em tempo real com motoristas e entregas, ao lado da lista de pedidos aguardando motorista" fetchpriority="high">
+          </picture>
           <figcaption>Painel do Logística Local &amp; Rotas, com dados fictícios em Cuiabá e Várzea Grande.</figcaption>
         </figure>
-      </div>
-    </section>
+      </section>
 
-    <section id="projetos" class="band section" aria-labelledby="titulo-projetos">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="titulo-projetos">Projetos</h2>
-          <p>O que já está no ar ou em uso.</p>
+      <section id="projetos" class="row" aria-labelledby="titulo-projetos">
+        <div class="row-label">
+          <h2 class="field" id="titulo-projetos">Projetos</h2>
+          <p class="label-note">No ar, em uso e em andamento</p>
         </div>
-
-        <article class="project">
-          <div class="project-body">
-            <div class="chips"><span class="chip chip-ok">Piloto em produção · v1.5.0</span></div>
-            <h3>Logística Local &amp; Rotas</h3>
-            <p>Entregas de última milha para transportadoras e lojas de Mato Grosso. Junta, em tempo real, quem despacha, quem entrega e quem recebe.</p>
-            <ul class="points">
-              <li>PIN do cliente e comprovante com foto, GPS e assinatura contra o “entregue, mas não recebi”.</li>
-              <li>Link de rastreio ao vivo, pronto para enviar pelo WhatsApp.</li>
-              <li>Roteirização com várias paradas e limite de carga do veículo.</li>
-              <li>Pix no padrão do Banco Central e carteira do motorista MEI.</li>
-            </ul>
-            <ul class="tags" aria-label="Tecnologias">
-              <li>Node.js</li><li>Next.js</li><li>React Native</li><li>Socket.io</li><li>Prisma</li>
-            </ul>
-            <div class="links">
-              <a href="https://github.com/sanklerbergman/logistica-local-rotas-case">Ler o estudo de caso →</a>
+        <div class="items">
+          <article class="item" id="logistica" aria-labelledby="titulo-logistica">
+            <p class="item-n" aria-hidden="true">01</p>
+            <div class="item-body">
+              <div class="item-text">
+                <div class="item-head">
+                  <h3 id="titulo-logistica">Logística Local &amp; Rotas</h3>
+                  <p class="stamp">Piloto em produção · v1.5.0</p>
+                </div>
+                <p>Entregas de última milha para transportadoras e lojas de Mato Grosso. Junta, em tempo real, quem despacha, quem entrega e quem recebe.</p>
+                <p class="links"><a class="go" href="https://github.com/sanklerbergman/logistica-local-rotas-case">Ler o estudo de caso</a></p>
+                <p class="note">Código privado. As imagens usam dados fictícios.</p>
+              </div>
+              <ul class="lines">
+                <li>PIN do cliente e comprovante com foto, GPS e assinatura contra o “entregue, mas não recebi”.</li>
+                <li>Link de rastreio ao vivo, pronto para enviar pelo WhatsApp.</li>
+                <li>Roteirização com várias paradas e limite de carga do veículo.</li>
+                <li>Pix no padrão do Banco Central e carteira do motorista MEI.</li>
+              </ul>
             </div>
-            <p class="note">Código privado. As imagens usam dados fictícios.</p>
-          </div>
-          <div class="project-media bare">
-            <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="assets/img/celulares-escuro.webp">
-              <img src="assets/img/celulares.webp" width="1600" height="1129" loading="lazy" alt="Três telas de celular: rastreio do pedido com PIN, lista de paradas do motorista e carteira MEI com saldo e limite anual">
-            </picture>
-          </div>
-        </article>
+            <figure class="item-media bare">
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="assets/img/celulares-escuro.webp">
+                <img src="assets/img/celulares.webp" width="1600" height="1129" loading="lazy" alt="Três telas de celular: rastreio do pedido com PIN, lista de paradas do motorista e carteira MEI com saldo e limite anual">
+              </picture>
+            </figure>
+          </article>
 
-        <article class="project flip">
-          <div class="project-body">
-            <div class="chips"><span class="chip chip-ok">No ar</span><span class="chip chip-ok">Código aberto</span></div>
-            <h3>Scanner Doc</h3>
-            <p>Foto, Word ou PDF viram PDF no próprio navegador: recorte automático do papel, juntar, separar e comprimir. Sem upload, sem cadastro e sem rastreio, e funciona offline.</p>
-            <ul class="tags" aria-label="Tecnologias">
-              <li>JavaScript</li><li>PWA offline</li><li>Canvas</li><li>Node test</li>
-            </ul>
-            <div class="links">
-              <a href="https://scanner.sankler.com.br/">Abrir o app →</a>
-              <a href="https://github.com/sanklerbergman/doc-scanner-pdf-engine">Ver o código</a>
+          <article class="item" id="scanner" aria-labelledby="titulo-scanner">
+            <p class="item-n" aria-hidden="true">02</p>
+            <div class="item-body">
+              <div class="item-head">
+                <h3 id="titulo-scanner">Scanner Doc</h3>
+                <p class="stamp">No ar · código aberto</p>
+              </div>
+              <p>Foto, Word ou PDF viram PDF no próprio navegador: recorte automático do papel, juntar, separar e comprimir. Sem upload, sem cadastro e sem rastreio, e funciona offline.</p>
+              <p class="links">
+                <a class="go" href="https://scanner.sankler.com.br/">Abrir o app</a>
+                <a class="go" href="https://github.com/sanklerbergman/doc-scanner-pdf-engine">Ver o código</a>
+              </p>
             </div>
-          </div>
-          <div class="project-media">
-            <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="assets/img/scanner-escuro.webp">
-              <img src="assets/img/scanner.webp" width="1280" height="800" loading="lazy" alt="Tela inicial do Scanner Doc: botão para escolher fotos, PDFs ou documentos do Word e a garantia de que nada sai do aparelho">
-            </picture>
-          </div>
-        </article>
+            <figure class="item-media crop-top">
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="assets/img/scanner-escuro.webp">
+                <img src="assets/img/scanner.webp" width="1280" height="800" loading="lazy" alt="Tela inicial do Scanner Doc: botão para escolher fotos, PDFs ou documentos do Word e a garantia de que nada sai do aparelho">
+              </picture>
+            </figure>
+          </article>
 
-        <article class="project project-slim">
-          <div class="project-body">
-            <div class="chips"><span class="chip chip-wip">Em desenvolvimento</span></div>
-            <h3>EmpilhaBurguer</h3>
-            <p>Jogo casual para Android: empilhar os ingredientes do hambúrguer no tempo certo, com fases, modo de 60 segundos e modo zen.</p>
-          </div>
-          <ul class="tags" aria-label="Tecnologias">
-            <li>Kotlin</li><li>Jetpack Compose</li><li>Canvas 2D</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="como-trabalho" class="section" aria-labelledby="titulo-metodo">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="titulo-metodo">Como eu trabalho</h2>
-          <p>Do problema à versão publicada, com registro de cada decisão.</p>
+          <article class="item item-slim" id="empilhaburguer" aria-labelledby="titulo-empilhaburguer">
+            <p class="item-n" aria-hidden="true">03</p>
+            <div class="item-body">
+              <div class="item-head">
+                <h3 id="titulo-empilhaburguer">EmpilhaBurguer</h3>
+                <p class="stamp">Em desenvolvimento</p>
+              </div>
+              <p>Jogo casual para Android: empilhar os ingredientes do hambúrguer no tempo certo, com fases, modo de 60 segundos e modo zen.</p>
+            </div>
+          </article>
         </div>
-        <ol class="steps">
-          <li>
-            <h3>Dores com fonte</h3>
-            <p>Pesquiso o que incomoda quem vai usar, com fonte, e registro cada dor com prioridade. Esse registro vira o backlog.</p>
-          </li>
-          <li>
-            <h3>Especificação</h3>
-            <p>Defino critérios de aceite claros antes de construir.</p>
-          </li>
-          <li>
-            <h3>Testes</h3>
-            <p>Testes automatizados, incluindo os de segurança e de permissão por perfil.</p>
-          </li>
-          <li>
-            <h3>Entrega</h3>
-            <p>Versões numeradas, com migração ensaiada numa cópia do banco, backup e conferência depois de publicar.</p>
-          </li>
-        </ol>
+      </section>
 
-        <div class="stack">
-          <h3>Tecnologias</h3>
-          <ul class="tags">
-            <li>TypeScript</li><li>React</li><li>Next.js</li><li>React Native/Expo</li><li>Node.js</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li><li>SQLite</li><li>Socket.io</li><li>Java 21</li><li>Kotlin/Jetpack Compose</li><li>Python</li><li>Playwright</li><li>Docker</li><li>Linux</li><li>Oracle Cloud</li>
-          </ul>
+      <section id="como-trabalho" class="row" aria-labelledby="titulo-metodo">
+        <div class="row-label"><h2 class="field" id="titulo-metodo">Como eu trabalho</h2></div>
+        <div class="method">
+          <p class="method-lead">Antes de escrever código, levanto o que as pessoas reclamam no Reclame Aqui, em fóruns e em avaliações de concorrentes. Cada funcionalidade responde a uma dessas dores, e cada decisão fica registrada até a versão publicada.</p>
+          <ol class="steps">
+            <li>
+              <h3>Dores com fonte</h3>
+              <p>Pesquiso o que incomoda quem vai usar, com fonte, e registro cada dor com prioridade. Esse registro vira o backlog.</p>
+            </li>
+            <li>
+              <h3>Especificação</h3>
+              <p>Defino critérios de aceite claros antes de construir.</p>
+            </li>
+            <li>
+              <h3>Testes</h3>
+              <p>Testes automatizados, incluindo os de segurança e de permissão por perfil.</p>
+            </li>
+            <li>
+              <h3>Entrega</h3>
+              <p>Versões numeradas, com migração ensaiada numa cópia do banco, backup e conferência depois de publicar.</p>
+            </li>
+          </ol>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contato" aria-labelledby="titulo-contato">
-      <div class="wrap">
+      <section id="contato" class="row row-stub" aria-labelledby="titulo-contato">
+        <div class="row-label row-label-quiet"><h2 class="field" id="titulo-contato">Contato</h2></div>
         <div class="contact">
-          <div>
-            <h2 id="titulo-contato">Sua operação vive no WhatsApp e na planilha?</h2>
-            <p>Me conte como ela funciona hoje. Mostro os sistemas rodando e penso com você no que resolver primeiro.</p>
-          </div>
+          <p class="contact-q">Sua operação vive no WhatsApp e na planilha?</p>
+          <p class="contact-text">Me conte como ela funciona hoje. Mostro os sistemas rodando e penso com você no que resolver primeiro.</p>
           <div class="actions">
             <a class="btn btn-primary" href="mailto:contato@sankler.com.br?subject=Contato%20pelo%20site">contato@sankler.com.br</a>
-            <a class="btn btn-ghost" href="https://www.linkedin.com/in/sankler-bergman-64962511b/">Falar no LinkedIn</a>
-            <a class="btn btn-ghost" href="https://github.com/sanklerbergman">Ver o GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/sankler-bergman-64962511b/">Falar no LinkedIn</a>
+            <a class="btn" href="https://github.com/sanklerbergman">Ver o GitHub</a>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer class="foot">
-    <div class="wrap">
-      <span>© 2026 Sankler Bergman</span>
-      <span>Sem cookies e sem rastreadores.</span>
-    </div>
-  </footer>
+    <footer class="row foot">
+      <div class="row-label"><p>© 2026 Sankler Bergman</p></div>
+      <div class="foot-text"><p>Sem cookies. Visitas contadas pelo Cloudflare Web Analytics.</p></div>
+    </footer>
+  </div>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7807c7852e47422086e274342e7d65ed"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

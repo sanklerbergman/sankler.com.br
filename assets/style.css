@@ -21,7 +21,7 @@
   --spot-wash: #fbf1ea;
   --stamp: #24358a;
   --on-spot: #ffffff;
-  --sheet: 1240px;
+  --sheet: 1600px;
   --label: 13.5rem;
   --pad: clamp(20px, 2.4vw, 32px);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -88,6 +88,7 @@ figure { margin: 0; }
   background: var(--spot); color: var(--on-spot); font-weight: 650; text-decoration: none;
 }
 .skip:focus { top: 12px; }
+.skip:hover { color: var(--on-spot); }
 
 /* Rótulo impresso: a voz do talão. */
 
@@ -110,7 +111,7 @@ figure { margin: 0; }
   border-inline: 1px solid var(--spot);
 }
 
-@media (min-width: 1304px) {
+@media (min-width: 1664px) {
   .sheet { margin-block: 32px; border-block: 1px solid var(--spot); }
 }
 
@@ -191,7 +192,7 @@ section { scroll-margin-top: 12px; }
 .hero-main { padding: clamp(28px, 4vw, 56px) var(--pad) clamp(28px, 3.4vw, 48px); }
 
 .hero h1 {
-  font-size: clamp(2.1rem, 3.9vw, 3.5rem);
+  font-size: clamp(2.1rem, 3.9vw, 4.5rem);
   font-weight: 800;
   font-stretch: 118%;
   letter-spacing: -0.012em;
@@ -300,7 +301,7 @@ figcaption { color: var(--ink-soft); font-size: 0.9rem; margin-top: 12px; }
 .stamp {
   display: inline-block;
   padding: 4px 10px 3px;
-  border: 2px solid currentColor;
+  border: 2px solid var(--stamp);
   border-radius: 4px;
   color: var(--stamp);
   font-size: 0.78rem; font-weight: 750; font-stretch: 78%;

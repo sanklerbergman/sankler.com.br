@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sankler Bergman · Software for the operations of small and mid-sized businesses</title>
+  <meta name="description" content="I build software for deliveries, field service and sales at small and mid-sized businesses, with a web dashboard, a mobile app and Pix payments, starting from the real complaints of the people who use it.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12100e" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://sankler.com.br/en/">
+  <link rel="alternate" hreflang="pt-BR" href="https://sankler.com.br/">
+  <link rel="alternate" hreflang="en" href="https://sankler.com.br/en/">
+  <link rel="alternate" hreflang="x-default" href="https://sankler.com.br/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://sankler.com.br/en/">
+  <meta property="og:title" content="Sankler Bergman · Software for the operations of small and mid-sized businesses">
+  <meta property="og:description" content="Deliveries, field service and sales, with a web dashboard, a mobile app and Pix payments, starting from the real complaints of the people who use it.">
+  <meta property="og:image" content="https://sankler.com.br/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Sankler, home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#b4500f"/><path d="M42.5 21.5c-2.4-2.6-6-4-10.2-4-6.6 0-11 3.5-11 8.5 0 4.7 3.7 6.7 9.8 8l2.8.6c3.6.8 5 1.8 5 3.6 0 2.2-2.5 3.8-6.3 3.8-3.9 0-7-1.6-8.9-4.3l-4.4 3.5c2.8 3.9 7.7 6.3 13.2 6.3 7.2 0 12.1-3.6 12.1-9.2 0-4.7-3.4-7.1-10.2-8.5l-2.8-.6c-3.2-.7-4.5-1.6-4.5-3.3 0-2 2.1-3.4 5.3-3.4 2.9 0 5.4 1 7 2.9z" fill="#fff"/></svg>
+        sankler
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a class="hide-sm" href="#projects">Projects</a>
+        <a class="hide-sm" href="#how-i-work">How I work</a>
+        <a class="hide-sm" href="#contact">Contact</a>
+        <a class="lang" href="../" hreflang="pt-BR" lang="pt-BR">Português</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" aria-labelledby="title">
+      <div class="wrap">
+        <p class="eyebrow">Sankler Bergman · software developer in Brazil</p>
+        <h1 id="title">Software for the operations of small and mid-sized businesses.</h1>
+        <p class="lead">Deliveries, field service and sales, with a web dashboard, a mobile app and Pix payments (Brazil's instant payment system). Before writing any code, I gather what people complain about on Reclame Aqui (Brazil's largest consumer complaint site), in forums and in competitor reviews. Every feature answers one of those pain points.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/sanklerbergman/logistica-local-rotas-case/blob/main/README.en.md">Read the case study</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+        <figure class="shot-hero">
+          <div class="browser">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="../assets/img/painel-escuro.webp">
+              <img src="../assets/img/painel.webp" width="1440" height="900" alt="Delivery dispatch dashboard: live map of Cuiabá with drivers and deliveries, next to the list of orders waiting for a driver" fetchpriority="high">
+            </picture>
+          </div>
+          <figcaption>Logística Local &amp; Rotas dashboard with fictitious data in Cuiabá, Brazil. The interface is in Portuguese.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="projects" class="band section" aria-labelledby="title-projects">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="title-projects">Projects</h2>
+          <p>What is already live or in use.</p>
+        </div>
+
+        <article class="project">
+          <div class="project-body">
+            <div class="chips"><span class="chip chip-ok">Pilot in production · v1.5.0</span></div>
+            <h3>Logística Local &amp; Rotas</h3>
+            <p>Last-mile delivery for carriers and retailers in Mato Grosso, Brazil. It connects, in real time, the dispatcher, the driver and the customer.</p>
+            <ul class="points">
+              <li>Customer PIN and proof of delivery with photo, GPS and signature, against “marked as delivered, but I never got it”.</li>
+              <li>Live tracking link, ready to send over WhatsApp.</li>
+              <li>Multi-stop route planning with vehicle load limits.</li>
+              <li>Pix following the Central Bank standard, and a wallet for self-employed (MEI) drivers.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>Node.js</li><li>Next.js</li><li>React Native</li><li>Socket.io</li><li>Prisma</li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/sanklerbergman/logistica-local-rotas-case/blob/main/README.en.md">Read the case study →</a>
+            </div>
+            <p class="note">Private code. Screenshots use fictitious data.</p>
+          </div>
+          <div class="project-media bare">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="../assets/img/celulares-escuro.webp">
+              <img src="../assets/img/celulares.webp" width="1600" height="1129" loading="lazy" alt="Three phone screens: order tracking with the confirmation PIN, the driver's list of stops, and the MEI wallet with balance and annual cap">
+            </picture>
+          </div>
+        </article>
+
+        <article class="project flip">
+          <div class="project-body">
+            <div class="chips"><span class="chip chip-ok">Live</span><span class="chip chip-ok">Open source</span></div>
+            <h3>Scanner Doc</h3>
+            <p>Photos, Word files or PDFs become a PDF right in the browser: automatic paper cropping, merging, splitting and compressing. No upload, no sign-up, no tracking, and it works offline.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>JavaScript</li><li>Offline PWA</li><li>Canvas</li><li>Node test</li>
+            </ul>
+            <div class="links">
+              <a href="https://sanklerbergman.github.io/doc-scanner-pdf-engine/">Open the app →</a>
+              <a href="https://github.com/sanklerbergman/doc-scanner-pdf-engine">View the code</a>
+            </div>
+          </div>
+          <div class="project-media">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="../assets/img/scanner-escuro.webp">
+              <img src="../assets/img/scanner.webp" width="1280" height="800" loading="lazy" alt="Scanner Doc home screen: a button to choose photos, PDFs or Word files, and the promise that nothing leaves the device">
+            </picture>
+          </div>
+        </article>
+
+        <article class="project project-slim">
+          <div class="project-body">
+            <div class="chips"><span class="chip chip-wip">In development</span></div>
+            <h3>EmpilhaBurguer</h3>
+            <p>Casual Android game: stack the burger ingredients with the right timing, with levels, a 60-second mode and a zen mode.</p>
+          </div>
+          <ul class="tags" aria-label="Technologies">
+            <li>Kotlin</li><li>Jetpack Compose</li><li>Canvas 2D</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-i-work" class="section" aria-labelledby="title-method">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="title-method">How I work</h2>
+          <p>From the problem to the shipped release, with every decision on record.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Pain points with sources</h3>
+            <p>I research what bothers the people who will use the product, with sources, and record each pain point with a priority. That record becomes the backlog.</p>
+          </li>
+          <li>
+            <h3>Specification</h3>
+            <p>I define clear acceptance criteria before building.</p>
+          </li>
+          <li>
+            <h3>Tests</h3>
+            <p>Automated tests, including security and role-based permission tests.</p>
+          </li>
+          <li>
+            <h3>Delivery</h3>
+            <p>Numbered releases, with migrations rehearsed on a copy of the database, backups and post-release checks.</p>
+          </li>
+        </ol>
+
+        <div class="stack">
+          <h3>Tech stack</h3>
+          <ul class="tags">
+            <li>TypeScript</li><li>React</li><li>Next.js</li><li>React Native/Expo</li><li>Node.js</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li><li>SQLite</li><li>Socket.io</li><li>Java 21</li><li>Kotlin/Jetpack Compose</li><li>Python</li><li>Playwright</li><li>Docker</li><li>Linux</li><li>Oracle Cloud</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="title-contact">
+      <div class="wrap">
+        <div class="contact">
+          <div>
+            <h2 id="title-contact">Does your operation run on WhatsApp and spreadsheets?</h2>
+            <p>Tell me how it works today. I'll show you the systems running and help you figure out what to solve first.</p>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://www.linkedin.com/in/sankler-bergman-64962511b/">Message me on LinkedIn</a>
+            <a class="btn btn-ghost" href="https://github.com/sanklerbergman">View GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>© 2026 Sankler Bergman</span>
+      <span>No cookies, no trackers.</span>
+    </div>
+  </footer>
+</body>
+</html>

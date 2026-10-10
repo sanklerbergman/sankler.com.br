@@ -48,3 +48,13 @@ Archivo (licença OFL, `../fonts/`).
 - Tamanho mínimo do logo reduzido com o nome: 100 px de largura na tela ou 25 mm impresso.
 - Não gire, não estique, não troque as cores, não aplique contorno, sombra ou degradê, e não reescreva o nome em outra fonte.
 - Sobre foto ou sobre o azul, use a versão branca.
+
+## Produtos: assinatura "por Sankler"
+
+Cada produto mantém o próprio nome, símbolo e cores. A marca Sankler entra como assinatura, nunca no lugar da identidade do produto.
+
+- **Onde:** no rodapé do produto (web e PWA), na tela "Sobre" do app e no README do repositório.
+- **Onde não:** no conteúdo do usuário. Nada de assinatura em PDFs, exportações, notas ou mensagens que o produto gera para o cliente.
+- **Forma:** a palavra "por" no texto do próprio produto, seguida do logo reduzido (`sankler-logo-reduzido-*.svg`) com 16 a 20 px de altura, com link para https://sankler.com.br. Para leitores de tela, o conjunto se chama "por Sankler".
+- **Versão do arquivo:** `fundo-claro` em tema claro, `fundo-escuro` em tema escuro, `branco` ou `preto` sobre a cor do produto. Não pinte o logo com a cor do produto.
+- **Arquivo local:** copie o SVG para dentro do repositório do produto e sirva do próprio domínio. Não carregue o logo de sankler.com.br, porque produtos offline e com CSP restrita (`img-src 'self'`) precisam do arquivo local, e assim a assinatura não faz nenhuma requisição a terceiros.

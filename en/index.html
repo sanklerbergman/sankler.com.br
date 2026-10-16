@@ -60,7 +60,7 @@
           <nav class="index" aria-labelledby="title-status">
             <p class="field" id="title-status">Status</p>
             <ol class="index-list">
-              <li><a href="#logistica"><span class="index-n">01</span><span class="index-t">Logística Local &amp; Rotas</span><span class="index-s">In production</span></a></li>
+              <li><a href="#tropeiro"><span class="index-n">01</span><span class="index-t">Tropeiro</span><span class="index-s">In production</span></a></li>
               <li><a href="#scanner"><span class="index-n">02</span><span class="index-t">Scanner Doc</span><span class="index-s">Live</span></a></li>
             </ol>
           </nav>
@@ -73,20 +73,20 @@
           <p class="label-note">Live, in use and in progress</p>
         </div>
         <div class="items">
-          <article class="item" id="logistica" aria-labelledby="title-logistica">
+          <article class="item" id="tropeiro" aria-labelledby="title-tropeiro">
             <p class="item-n" aria-hidden="true">01</p>
             <div class="item-body">
               <div class="item-text">
                 <div class="item-head">
-                  <h3 id="title-logistica">Logística Local &amp; Rotas</h3>
-                  <p class="stamp">Pilot in production · v1.5.0</p>
+                  <h3 id="title-tropeiro">Tropeiro</h3>
+                  <p class="stamp">In production · <span class="ver">v1.0.0</span></p>
                 </div>
-                <p>Last-mile delivery for carriers and retailers in Mato Grosso, Brazil. It connects, in real time, the dispatcher, the driver and the customer.</p>
-                <p class="links"><a class="go" href="https://github.com/sanklerbergman/logistica-local-rotas-case/blob/main/README.en.md">Read the case study</a></p>
-                <p class="note">Private code. Screenshots use fictitious data in Cuiabá and Várzea Grande, Brazil. The interface is in Portuguese.</p>
+                <p>A platform for running small and medium businesses, starting with last-mile delivery in Mato Grosso, Brazil. It connects, in real time, the dispatcher, the driver and the customer. In October 2026 it replaced the pilot, Logística Local &amp; Rotas.</p>
+                <p class="links"><a class="go" href="https://github.com/sanklerbergman/logistica-local-rotas-case/blob/main/README.en.md">Read the pilot's case study</a></p>
+                <p class="note">Private code. Screenshots use fictitious data in Cuiabá, Brazil. The interface is in Portuguese.</p>
               </div>
               <ul class="lines">
-                <li>Customer PIN and proof of delivery with photo, GPS and signature, against “marked as delivered, but I never got it”.</li>
+                <li>Customer PIN and proof of delivery with photo, GPS and an integrity hash, against “marked as delivered, but I never got it”.</li>
                 <li>Live tracking link, ready to send over WhatsApp.</li>
                 <li>Multi-stop route planning with vehicle load limits.</li>
                 <li>Pix following the Central Bank standard, and a wallet for self-employed (MEI) drivers.</li>
@@ -95,13 +95,13 @@
             <figure class="item-media">
               <picture>
                 <source media="(max-width: 760px)" srcset="../assets/img/painel-escuro-mapa.webp" width="912" height="768">
-                <img src="../assets/img/painel-escuro.webp" width="1440" height="900" alt="Delivery dispatch dashboard: live map of Cuiabá and Várzea Grande with drivers, deliveries and orders waiting for a driver" fetchpriority="high">
+                <img src="../assets/img/painel-escuro.webp" width="1440" height="900" alt="Tropeiro's delivery dispatch dashboard: live map of Cuiabá with the drivers and the deliveries on the way and pending" fetchpriority="high">
               </picture>
             </figure>
             <figure class="item-media-end phones">
-              <img src="../assets/img/celular-rastreio-escuro.webp" width="533" height="1129" loading="lazy" alt="Order tracking on the customer's phone, with the PIN that confirms receipt">
-              <img src="../assets/img/celular-paradas-escuro.webp" width="534" height="1129" loading="lazy" alt="The driver's list of stops, with the address and buttons to navigate with Waze or Google Maps">
-              <img src="../assets/img/celular-carteira-escuro.webp" width="533" height="1129" loading="lazy" alt="The self-employed (MEI) driver's wallet, with the balance for Pix withdrawal and the annual revenue cap">
+              <img src="../assets/img/celular-rastreio-escuro.webp" width="533" height="1129" loading="lazy" alt="Order tracking on the customer's phone, with the PIN that confirms receipt and the driver on the map">
+              <img src="../assets/img/celular-paradas-escuro.webp" width="533" height="1129" loading="lazy" alt="The driver's route in the app, with the stops in order, the address and buttons to open the map and call">
+              <img src="../assets/img/celular-carteira-escuro.webp" width="533" height="1129" loading="lazy" alt="The driver's wallet in the app, with the balance and the gauge of the self-employed (MEI) annual revenue cap">
             </figure>
           </article>
 
@@ -177,7 +177,7 @@
 
     <footer class="row foot">
       <div class="row-label"><p>© 2026 Sankler Bergman</p></div>
-      <div class="foot-text"><p>No cookies. Visits counted by Cloudflare Web Analytics.</p><p class="version">v1.4.0</p></div>
+      <div class="foot-text"><p>No cookies. Visits counted by Cloudflare Web Analytics.</p><p class="version">v1.5.0</p></div>
     </footer>
   </div>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7807c7852e47422086e274342e7d65ed"}'></script><!-- End Cloudflare Web Analytics -->

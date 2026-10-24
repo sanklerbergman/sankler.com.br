@@ -195,6 +195,11 @@ section { scroll-margin-top: 12px; }
   line-height: 1.03;
 }
 
+/* A folha para de crescer em 1600px: daí em diante o título fica maior e preenche a coluna, em vez de quebrar em linhas curtas. */
+@media (min-width: 1600px) {
+  .hero h1 { font-size: 5.25rem; }
+}
+
 .lead {
   color: var(--ink-soft);
   font-size: clamp(1.1rem, 1.5vw, 1.3rem);

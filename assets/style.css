@@ -96,6 +96,8 @@ figure { margin: 0; }
   margin-inline: auto;
   background: var(--paper);
   border-inline: 1px solid var(--line);
+  /* O carimbo entra em scale(1.7) e passaria da borda no celular. clip corta sem criar rolagem e não quebra sticky. */
+  overflow-x: clip;
 }
 
 @media (min-width: 1664px) {

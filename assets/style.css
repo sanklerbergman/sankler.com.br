@@ -380,6 +380,9 @@ section { scroll-margin-top: 12px; }
 
 .foot { color: var(--ink-soft); font-size: 0.9rem; }
 .foot .row-label { padding-block: 20px; }
+/* O nome não se parte: onde a coluna é estreita, a quebra cai depois do ano. */
+.foot .row-label p { font-stretch: 85%; }
+.foot .row-label span { white-space: nowrap; }
 .foot-text { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 20px var(--pad); }
 .version { font-variant-numeric: tabular-nums; }
 

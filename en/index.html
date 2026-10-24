@@ -79,9 +79,9 @@
               <div class="item-text">
                 <div class="item-head">
                   <h3 id="title-tropeiro">Tropeiro</h3>
-                  <p class="stamp">In production · <span class="ver">v1.4.2</span></p>
+                  <p class="stamp">In production · <span class="ver">v1.12.1</span></p>
                 </div>
-                <p>A platform for running small and medium businesses: each one uses the modules it needs, from last-mile delivery to work orders and point of sale, sharing a single record of customers and products. The same phone app serves the driver, the technician and the salesperson. It started with deliveries in Mato Grosso, Brazil, and in October 2026 it replaced the pilot, Logística Local &amp; Rotas.</p>
+                <p>A platform for running small and medium businesses: each one uses the modules it needs, from last-mile delivery to work orders, point of sale and used auto parts, sharing a single record of customers and products. The same phone app serves the driver, the technician and the salesperson. It started with deliveries in Mato Grosso, Brazil, and in October 2026 it replaced the pilot, Logística Local &amp; Rotas.</p>
                 <p class="links"><a class="go" href="https://github.com/sanklerbergman/logistica-local-rotas-case/blob/main/README.en.md">Read the pilot's case study</a></p>
                 <p class="note">Private code. Screenshots use fictitious data in Cuiabá, Brazil. The interface is in Portuguese.</p>
               </div>
@@ -91,6 +91,8 @@
                 <li>Work orders from quote to payment, with the technician in the app: photos, parts and the customer's signature, even offline.</li>
                 <li>Preventive maintenance that opens work orders on its own, on each plan's schedule.</li>
                 <li>Point of sale at the counter, with a barcode scanner, and on the phone, even offline: cash register, store credit, exchanges and returns.</li>
+                <li>Used auto parts for salvage yards: each part linked to its donor car by the VIN, with photos, video and a barcode label.</li>
+                <li>A page for each part, shared over WhatsApp with the photo and price right in the chat, and point-of-sale sales with a warranty and checked returns.</li>
                 <li>Pix following the Central Bank standard, and a wallet for self-employed (MEI) drivers.</li>
               </ul>
             </div>
@@ -110,15 +112,26 @@
           <article class="item" id="scanner" aria-labelledby="title-scanner">
             <p class="item-n" aria-hidden="true">02</p>
             <div class="item-body">
-              <div class="item-head">
-                <h3 id="title-scanner">Scanner Doc</h3>
-                <p class="stamp">Live · open source</p>
+              <div class="item-text">
+                <div class="item-head">
+                  <h3 id="title-scanner">Scanner Doc</h3>
+                  <p class="stamp">Live · <span class="ver">v3.7.0</span> · open source</p>
+                </div>
+                <p>Photos, Word files or PDFs become a PDF right in the browser. Nothing leaves the device: no upload, no sign-up, no tracking, and it works offline.</p>
+                <p class="links">
+                  <a class="go" href="https://scanner.sankler.com.br/">Open the app</a>
+                  <a class="go" href="https://github.com/sanklerbergman/doc-scanner-pdf-engine">View the code</a>
+                </p>
+                <p class="note">The interface is in Portuguese.</p>
               </div>
-              <p>Photos, Word files or PDFs become a PDF right in the browser: automatic paper cropping, merging, splitting and compressing. No upload, no sign-up, no tracking, and it works offline.</p>
-              <p class="links">
-                <a class="go" href="https://scanner.sankler.com.br/">Open the app</a>
-                <a class="go" href="https://github.com/sanklerbergman/doc-scanner-pdf-engine">View the code</a>
-              </p>
+              <ul class="lines">
+                <li>Automatic paper cropping with adjustable corners, and a filter that removes shadows and strengthens faint text.</li>
+                <li>Merging, splitting and compressing PDFs, including password-protected ones, and password protection for the new PDF.</li>
+                <li>Searchable text (OCR) in photos and scanned PDFs, recognized on the device itself.</li>
+                <li>Real redaction: what lies underneath is removed from the PDF, not just covered, and the app finds tax IDs (CPF, CNPJ), phone numbers and emails to redact.</li>
+                <li>Signing with a Brazilian A1 digital certificate (e-CPF or e-CNPJ), in the PAdES standard that Acrobat recognizes.</li>
+                <li>PDF/A, the archival format some Brazilian courts require for electronic filings.</li>
+              </ul>
             </div>
             <figure class="item-media crop-top">
               <img src="../assets/img/scanner-escuro.webp" width="1280" height="800" loading="lazy" alt="Scanner Doc home screen: a button to choose photos, PDFs or Word files, and the promise that nothing leaves the device">
@@ -179,7 +192,7 @@
 
     <footer class="row foot">
       <div class="row-label"><p>© 2026 Sankler Bergman</p></div>
-      <div class="foot-text"><p>No cookies. Visits counted by Cloudflare Web Analytics.</p><p class="version">v1.6.0</p></div>
+      <div class="foot-text"><p>No cookies. Visits counted by Cloudflare Web Analytics.</p><p class="version">v1.7.0</p></div>
     </footer>
   </div>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7807c7852e47422086e274342e7d65ed"}'></script><!-- End Cloudflare Web Analytics -->

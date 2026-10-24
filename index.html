@@ -79,9 +79,9 @@
               <div class="item-text">
                 <div class="item-head">
                   <h3 id="titulo-tropeiro">Tropeiro</h3>
-                  <p class="stamp">Em produção · <span class="ver">v1.4.2</span></p>
+                  <p class="stamp">Em produção · <span class="ver">v1.12.1</span></p>
                 </div>
-                <p>Plataforma para a operação de pequenas e médias empresas: cada uma usa os módulos de que precisa, entre entregas de última milha, ordens de serviço e PDV, com um cadastro só de clientes e de produtos. O mesmo app de celular serve o motorista, o técnico e o vendedor. Começou pelas entregas em Mato Grosso e, em outubro de 2026, substituiu o piloto, o Logística Local &amp; Rotas.</p>
+                <p>Plataforma para a operação de pequenas e médias empresas: cada uma usa os módulos de que precisa, entre entregas de última milha, ordens de serviço, PDV e peças usadas, com um cadastro só de clientes e de produtos. O mesmo app de celular serve o motorista, o técnico e o vendedor. Começou pelas entregas em Mato Grosso e, em outubro de 2026, substituiu o piloto, o Logística Local &amp; Rotas.</p>
                 <p class="links"><a class="go" href="https://github.com/sanklerbergman/logistica-local-rotas-case">Ler o estudo de caso do piloto</a></p>
                 <p class="note">Código privado. As imagens usam dados fictícios em Cuiabá.</p>
               </div>
@@ -91,6 +91,8 @@
                 <li>Ordem de serviço do orçamento ao recebimento, com o técnico no app: fotos, peças e assinatura do cliente, mesmo sem internet.</li>
                 <li>Manutenção preventiva que abre as ordens sozinha, no prazo de cada plano.</li>
                 <li>PDV no balcão, com leitor de código de barras, e no celular, sem internet: caixa, fiado, troca e devolução.</li>
+                <li>Peças usadas para desmanches: cada peça ligada ao carro de origem pelo chassi, com fotos, vídeo e etiqueta com código de barras.</li>
+                <li>Ficha da peça com link para o WhatsApp, que já mostra a foto e o preço na conversa, e venda no PDV com garantia e devolução conferida.</li>
                 <li>Pix no padrão do Banco Central e carteira do motorista MEI.</li>
               </ul>
             </div>
@@ -110,15 +112,25 @@
           <article class="item" id="scanner" aria-labelledby="titulo-scanner">
             <p class="item-n" aria-hidden="true">02</p>
             <div class="item-body">
-              <div class="item-head">
-                <h3 id="titulo-scanner">Scanner Doc</h3>
-                <p class="stamp">No ar · código aberto</p>
+              <div class="item-text">
+                <div class="item-head">
+                  <h3 id="titulo-scanner">Scanner Doc</h3>
+                  <p class="stamp">No ar · <span class="ver">v3.7.0</span> · código aberto</p>
+                </div>
+                <p>Foto, Word ou PDF viram PDF no próprio navegador. Nada sai do aparelho: sem upload, sem cadastro e sem rastreio, e funciona offline.</p>
+                <p class="links">
+                  <a class="go" href="https://scanner.sankler.com.br/">Abrir o app</a>
+                  <a class="go" href="https://github.com/sanklerbergman/doc-scanner-pdf-engine">Ver o código</a>
+                </p>
               </div>
-              <p>Foto, Word ou PDF viram PDF no próprio navegador: recorte automático do papel, juntar, separar e comprimir. Sem upload, sem cadastro e sem rastreio, e funciona offline.</p>
-              <p class="links">
-                <a class="go" href="https://scanner.sankler.com.br/">Abrir o app</a>
-                <a class="go" href="https://github.com/sanklerbergman/doc-scanner-pdf-engine">Ver o código</a>
-              </p>
+              <ul class="lines">
+                <li>Recorte automático do papel, com os cantos ajustáveis, e filtro que tira a sombra e reforça o texto.</li>
+                <li>Juntar, separar e comprimir PDFs, inclusive os protegidos por senha, e proteger o PDF novo com senha.</li>
+                <li>Texto pesquisável (OCR) nas fotos e nos PDFs escaneados, reconhecido no próprio aparelho.</li>
+                <li>Tarja de verdade: o que está embaixo é apagado do PDF, não só coberto, e o app acha CPF, CNPJ, telefone e e-mail para tarjar.</li>
+                <li>Assinatura com certificado digital A1 (e-CPF ou e-CNPJ), no padrão PAdES, que o Acrobat reconhece.</li>
+                <li>PDF/A, o formato de arquivamento que alguns tribunais pedem no processo eletrônico.</li>
+              </ul>
             </div>
             <figure class="item-media crop-top">
               <img src="assets/img/scanner-escuro.webp" width="1280" height="800" loading="lazy" alt="Tela inicial do Scanner Doc: botão para escolher fotos, PDFs ou documentos do Word e a garantia de que nada sai do aparelho">
@@ -179,7 +191,7 @@
 
     <footer class="row foot">
       <div class="row-label"><p>© 2026 Sankler Bergman</p></div>
-      <div class="foot-text"><p>Sem cookies. Visitas contadas pelo Cloudflare Web Analytics.</p><p class="version">v1.6.0</p></div>
+      <div class="foot-text"><p>Sem cookies. Visitas contadas pelo Cloudflare Web Analytics.</p><p class="version">v1.7.0</p></div>
     </footer>
   </div>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7807c7852e47422086e274342e7d65ed"}'></script><!-- End Cloudflare Web Analytics -->

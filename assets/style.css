@@ -263,7 +263,7 @@ section { scroll-margin-top: 12px; }
 .item-media { grid-column: 2; grid-row: 1; border-bottom: 1px solid var(--spot-rule); }
 .item-media img { width: 100%; }
 /* A captura do Scanner Doc termina logo abaixo da área de envio, sem texto cortado. */
-.item-media.crop-top img { aspect-ratio: 1280 / 540; object-fit: cover; object-position: top; }
+.item-media.crop-top img { aspect-ratio: 1280 / 568; object-fit: cover; object-position: top; }
 
 /* A segunda imagem do item fecha o item, depois do texto que ela mostra. */
 .item-media-end { grid-column: 2; grid-row: 3; border-top: 1px solid var(--spot-rule); }

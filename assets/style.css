@@ -385,6 +385,8 @@ section { scroll-margin-top: 12px; }
   max-width: 24ch;
 }
 .contact-text { color: var(--ink-soft); font-size: 1.1rem; max-width: 52ch; margin-top: 16px; }
+/* O que acontece depois do e-mail, embaixo dos botões. */
+.contact-note { color: var(--ink-soft); max-width: 52ch; margin-top: 18px; }
 
 /* Rodapé */
 

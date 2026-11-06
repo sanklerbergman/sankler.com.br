@@ -62,6 +62,7 @@
             <ol class="index-list">
               <li><a href="#tropeiro"><span class="index-n">01</span><span class="index-t">Tropeiro</span><span class="index-s">Em produção</span></a></li>
               <li><a href="#scanner"><span class="index-n">02</span><span class="index-t">Scanner Doc</span><span class="index-s">No ar</span></a></li>
+              <li><a href="#empilhaburguer"><span class="index-n">03</span><span class="index-t">EmpilhaBurguer</span><span class="index-s">Em desenvolvimento</span></a></li>
             </ol>
           </nav>
         </div>
@@ -77,16 +78,24 @@
         <div class="items">
           <article class="item" id="tropeiro" aria-labelledby="titulo-tropeiro">
             <p class="item-n" aria-hidden="true">01</p>
-            <div class="item-body">
+            <div class="item-body item-intro">
+              <div class="item-head">
+                <h3 id="titulo-tropeiro">Tropeiro</h3>
+                <p class="stamp">Em produção · <span class="ver">v1.12.1</span></p>
+              </div>
               <div class="item-text">
-                <div class="item-head">
-                  <h3 id="titulo-tropeiro">Tropeiro</h3>
-                  <p class="stamp">Em produção · <span class="ver">v1.12.1</span></p>
-                </div>
                 <p>Plataforma para a operação de pequenas e médias empresas: cada uma usa os módulos de que precisa, entre entregas de última milha, ordens de serviço, PDV e peças usadas, com um cadastro só de clientes e de produtos. O mesmo app de celular serve o motorista, o técnico e o vendedor. Começou pelas entregas em Mato Grosso e, em outubro de 2026, substituiu o piloto, o Logística Local &amp; Rotas.</p>
                 <p class="links"><a class="go" href="https://github.com/sanklerbergman/logistica-local-rotas-case">Ler o estudo de caso do piloto</a></p>
                 <p class="note">Código privado. As imagens usam dados fictícios em Cuiabá.</p>
               </div>
+            </div>
+            <figure class="item-media">
+              <picture>
+                <source media="(max-width: 760px)" srcset="assets/img/painel-inicio-escuro-celular.webp" width="912" height="768">
+                <img src="assets/img/painel-inicio-escuro.webp" width="1440" height="900" alt="Início da central do Tropeiro, com os resumos ao vivo do PDV, das ordens de serviço e das entregas da empresa" fetchpriority="high">
+              </picture>
+            </figure>
+            <div class="item-body item-more">
               <ul class="lines">
                 <li>PIN do cliente e comprovante com foto, GPS e hash de integridade contra o “entregue, mas não recebi”.</li>
                 <li>Rastreio ao vivo pelo WhatsApp, rotas com limite de carga e NF-e conferida pela câmera do motorista.</li>
@@ -98,13 +107,7 @@
                 <li>Pix no padrão do Banco Central e carteira do motorista MEI.</li>
               </ul>
             </div>
-            <figure class="item-media">
-              <picture>
-                <source media="(max-width: 760px)" srcset="assets/img/painel-inicio-escuro-celular.webp" width="912" height="768">
-                <img src="assets/img/painel-inicio-escuro.webp" width="1440" height="900" alt="Início da central do Tropeiro, com os resumos ao vivo do PDV, das ordens de serviço e das entregas da empresa" fetchpriority="high">
-              </picture>
-            </figure>
-            <figure class="item-media-end phones">
+            <figure class="item-media-end phones" tabindex="0" role="region" aria-label="Telas do app no celular">
               <img src="assets/img/celular-rastreio-escuro.webp" width="533" height="1129" loading="lazy" alt="Rastreio do pedido no celular do cliente, com o PIN que confirma o recebimento e o motorista no mapa">
               <img src="assets/img/celular-os-escuro.webp" width="533" height="1129" loading="lazy" alt="App do técnico com a assinatura do cliente, feita com o dedo, na ordem de serviço">
               <img src="assets/img/celular-pdv-escuro.webp" width="533" height="1129" loading="lazy" alt="Venda registrada no PDV do celular, com o recibo, o pagamento por Pix e o botão para enviar o PDF">
@@ -113,18 +116,26 @@
 
           <article class="item" id="scanner" aria-labelledby="titulo-scanner">
             <p class="item-n" aria-hidden="true">02</p>
-            <div class="item-body">
+            <div class="item-body item-intro">
+              <div class="item-head">
+                <h3 id="titulo-scanner">Scanner Doc</h3>
+                <p class="stamp">No ar · <span class="ver">v3.7.0</span> · código aberto</p>
+              </div>
               <div class="item-text">
-                <div class="item-head">
-                  <h3 id="titulo-scanner">Scanner Doc</h3>
-                  <p class="stamp">No ar · <span class="ver">v3.7.0</span> · código aberto</p>
-                </div>
                 <p>Foto, Word ou PDF viram PDF no próprio navegador. Nada sai do aparelho: sem upload, sem cadastro e sem rastreio, e funciona offline.</p>
                 <p class="links">
                   <a class="go" href="https://scanner.sankler.com.br/">Abrir o app</a>
                   <a class="go" href="https://github.com/sanklerbergman/doc-scanner-pdf-engine">Ver o código</a>
                 </p>
               </div>
+            </div>
+            <figure class="item-media crop-top">
+              <picture>
+                <source media="(max-width: 760px)" srcset="assets/img/scanner-escuro-celular.webp" width="912" height="1372">
+                <img src="assets/img/scanner-escuro.webp" width="1280" height="800" loading="lazy" alt="Tela inicial do Scanner Doc: botão para escolher fotos, PDFs ou documentos do Word e a garantia de que nada sai do aparelho">
+              </picture>
+            </figure>
+            <div class="item-body item-more">
               <ul class="lines">
                 <li>Recorte automático do papel, com os cantos ajustáveis, e filtro que tira a sombra e reforça o texto.</li>
                 <li>Juntar, separar e comprimir PDFs, inclusive os protegidos por senha, e proteger o PDF novo com senha.</li>
@@ -134,14 +145,11 @@
                 <li>PDF/A, o formato de arquivamento que alguns tribunais pedem no processo eletrônico.</li>
               </ul>
             </div>
-            <figure class="item-media crop-top">
-              <img src="assets/img/scanner-escuro.webp" width="1280" height="800" loading="lazy" alt="Tela inicial do Scanner Doc: botão para escolher fotos, PDFs ou documentos do Word e a garantia de que nada sai do aparelho">
-            </figure>
           </article>
 
           <article class="item item-slim" id="empilhaburguer" aria-labelledby="titulo-empilhaburguer">
             <p class="item-n" aria-hidden="true">03</p>
-            <div class="item-body">
+            <div class="item-body item-intro">
               <div class="item-head">
                 <h3 id="titulo-empilhaburguer">EmpilhaBurguer</h3>
                 <p class="stamp">Em desenvolvimento</p>
@@ -194,7 +202,7 @@
 
     <footer class="row foot">
       <div class="row-label"><p>© 2026 <span>Sankler Bergman</span></p></div>
-      <div class="foot-text"><p>Sem cookies. Visitas contadas pelo Cloudflare Web Analytics.</p><p class="version">v1.9.0</p></div>
+      <div class="foot-text"><p>Sem cookies. Visitas contadas pelo Cloudflare Web Analytics.</p><p class="version">v1.9.1</p></div>
     </footer>
   </div>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7807c7852e47422086e274342e7d65ed"}'></script><!-- End Cloudflare Web Analytics -->

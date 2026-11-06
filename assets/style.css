@@ -66,15 +66,18 @@ a:hover { color: var(--spot); text-decoration-thickness: 2px; }
 :focus-visible { outline: 2px solid var(--spot); outline-offset: 3px; }
 
 h1, h2, h3 { margin: 0; text-wrap: balance; }
-p { margin: 0; text-wrap: pretty; }
+p { margin: 0; }
+p, li { text-wrap: pretty; }
 figure { margin: 0; }
 
 .skip {
-  position: absolute; left: 12px; top: -60px; z-index: 10;
+  position: absolute; left: 12px; top: 12px; z-index: 10;
   padding: 10px 14px;
   background: var(--brand); color: var(--on-brand); font-weight: 650; text-decoration: none;
+  /* Escondido pela própria altura: com texto grande, ele não vaza para dentro da tela. */
+  transform: translateY(calc(-100% - 24px));
 }
-.skip:focus { top: 12px; }
+.skip:focus { transform: none; }
 .skip:hover { color: var(--on-brand); }
 
 /* Rótulo impresso: a voz do talão. */
@@ -252,7 +255,8 @@ section { scroll-margin-top: 12px; }
 .index-s { color: var(--stamp); font-size: 0.82rem; font-weight: 650; font-stretch: 80%; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 3px; }
 .index-list a:hover .index-t { color: var(--spot); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 
-/* Projetos: cada um é um item da OS, com a imagem encostada nas linhas. */
+/* Projetos: cada um é um item da OS. Primeiro o nome, o carimbo e o que o projeto é;
+   depois a imagem; depois as linhas do que ele faz. A ordem do HTML é a mesma da tela. */
 
 .item {
   display: grid;
@@ -261,7 +265,7 @@ section { scroll-margin-top: 12px; }
 .item + .item { border-top: 1px solid var(--line); }
 
 .item-n {
-  grid-row: span 2;
+  grid-row: span 3;
   padding: var(--pad) 0;
   border-right: 1px solid var(--spot-rule);
   color: var(--spot);
@@ -270,27 +274,36 @@ section { scroll-margin-top: 12px; }
   line-height: 1; text-align: center;
 }
 .item-slim .item-n { grid-row: auto; }
-.item:has(.item-media-end) .item-n { grid-row: span 3; }
+.item:has(.item-media-end) .item-n { grid-row: span 4; }
 
-.item-media { grid-column: 2; grid-row: 1; border-bottom: 1px solid var(--spot-rule); }
+.item-media { grid-column: 2; border-block: 1px solid var(--spot-rule); }
 .item-media img { width: 100%; }
 /* A captura do Scanner Doc termina logo abaixo da área de envio, sem texto cortado. */
 .item-media.crop-top img { aspect-ratio: 1280 / 568; object-fit: cover; object-position: top; }
 
 /* A segunda imagem do item fecha o item, depois do texto que ela mostra. */
-.item-media-end { grid-column: 2; grid-row: 3; border-top: 1px solid var(--spot-rule); }
+.item-media-end { grid-column: 2; border-top: 1px solid var(--spot-rule); }
 
 /* Os três celulares lado a lado; no celular viram uma faixa que corre para o lado. */
 .phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .phones img { width: 100%; }
 
-.item-body { grid-column: 2; grid-row: 2; padding: var(--pad); }
-.item-slim .item-body { grid-row: 1; }
-.item-body:has(.lines) {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  column-gap: calc(var(--pad) * 1.5);
-  align-items: start;
+.item-body { grid-column: 2; padding: var(--pad); }
+
+/* Em tela larga, a abertura do item é uma linha do talão: nome e carimbo à esquerda,
+   o texto à direita; as linhas, depois da imagem, seguem as mesmas duas colunas. */
+@media (min-width: 901px) {
+  .item-intro,
+  .item-more .lines {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: calc(var(--pad) * 1.5);
+    align-items: start;
+  }
+  /* Cada par de linhas tem a mesma altura, para os fios baterem de um lado e do outro. */
+  .item-more .lines { align-items: stretch; }
+  .item-intro > p:first-of-type,
+  .item-intro .item-text > p:first-child { margin-top: 0; }
 }
 
 .item-body p { color: var(--ink-soft); margin-top: 14px; max-width: 60ch; }
@@ -420,7 +433,7 @@ section { scroll-margin-top: 12px; }
 
 @media (max-width: 1080px) {
   :root { --label: 10.5rem; }
-  .hero { grid-template-columns: 1fr; }
+  .hero { grid-template-columns: minmax(0, 1fr); }
   .index { border-left: 0; border-top: 1px solid var(--line); padding-top: var(--pad); }
   .item { grid-template-columns: 4rem minmax(0, 1fr); }
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -428,14 +441,11 @@ section { scroll-margin-top: 12px; }
   .steps li:nth-child(n + 3) { border-top: 1px solid var(--spot-rule); }
 }
 
-@media (max-width: 900px) {
-  .item-body:has(.lines) { display: block; }
-  .item-body .lines { margin-top: 18px; }
-}
-
 @media (max-width: 760px) {
   :root { --pad: 18px; }
-  .row { grid-template-columns: 1fr; }
+  .row { grid-template-columns: minmax(0, 1fr); }
+  /* Com texto grande, o carimbo quebra em vez de sair da coluna. */
+  .stamp { white-space: normal; max-width: 100%; overflow-wrap: anywhere; hyphens: auto; }
   .row-label { border-right: 0; border-bottom: 1px solid var(--spot-rule); padding-block: 12px; }
   .label-note { display: inline; margin: 0 0 0 10px; font-size: 0.85rem; }
   .label-note::before { content: "· "; }
@@ -445,7 +455,7 @@ section { scroll-margin-top: 12px; }
     clip-path: inset(50%); white-space: nowrap;
   }
 
-  .head { grid-template-columns: 1fr auto; }
+  .head { grid-template-columns: minmax(0, 1fr) auto; }
   .brand { border-right: 0; padding-block: 14px; }
   .brand-sub { display: block; }
   .brand img { grid-row: span 2; width: 34px; height: 34px; }
@@ -456,13 +466,16 @@ section { scroll-margin-top: 12px; }
   .nav a { padding: 0 8px; font-size: 0.8rem; }
 
   .hero-main { padding-top: 28px; }
-  .actions .btn { flex: 1 1 100%; }
+  /* O índice repete o botão "Conheça os projetos" e os carimbos logo abaixo; no celular ele sai e o primeiro projeto sobe. */
+  .index { display: none; }
+  .actions .btn { flex: 1 1 100%; min-width: 0; overflow-wrap: anywhere; }
 
   .item { grid-template-columns: 3rem minmax(0, 1fr); }
-  .item-media, .item-media-end { grid-column: 1 / -1; }
-  .item-n { grid-row: 2; font-size: 1.5rem; padding-top: 22px; }
-  .item-slim .item-n { grid-row: 1; }
-  .item:has(.item-media-end) .item-n { grid-row: 2; }
+  /* O número acompanha só a abertura; imagem e linhas usam a largura toda. */
+  .item-media, .item-media-end, .item-more { grid-column: 1 / -1; }
+  .item-n, .item:has(.item-media-end) .item-n { grid-row: 1; font-size: 1.5rem; padding-top: 22px; }
+  /* No celular a captura do Scanner Doc é a tela do celular, inteira. */
+  .item-media.crop-top img { aspect-ratio: auto; }
 
   .phones {
     display: flex;
@@ -474,7 +487,7 @@ section { scroll-margin-top: 12px; }
   .phones img { flex: 0 0 80%; width: 80%; scroll-snap-align: center; }
   .phones:focus-visible { outline-offset: -2px; }
 
-  .steps { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: minmax(0, 1fr); }
   .steps li + li { border-left: 0; border-top: 1px solid var(--spot-rule); }
 
   .foot .row-label { border-bottom: 0; padding-bottom: 0; }

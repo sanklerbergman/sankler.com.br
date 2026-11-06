@@ -62,6 +62,7 @@
             <ol class="index-list">
               <li><a href="#tropeiro"><span class="index-n">01</span><span class="index-t">Tropeiro</span><span class="index-s">In production</span></a></li>
               <li><a href="#scanner"><span class="index-n">02</span><span class="index-t">Scanner Doc</span><span class="index-s">Live</span></a></li>
+              <li><a href="#empilhaburguer"><span class="index-n">03</span><span class="index-t">EmpilhaBurguer</span><span class="index-s">In development</span></a></li>
             </ol>
           </nav>
         </div>
@@ -77,16 +78,24 @@
         <div class="items">
           <article class="item" id="tropeiro" aria-labelledby="title-tropeiro">
             <p class="item-n" aria-hidden="true">01</p>
-            <div class="item-body">
+            <div class="item-body item-intro">
+              <div class="item-head">
+                <h3 id="title-tropeiro">Tropeiro</h3>
+                <p class="stamp">In production · <span class="ver">v1.12.1</span></p>
+              </div>
               <div class="item-text">
-                <div class="item-head">
-                  <h3 id="title-tropeiro">Tropeiro</h3>
-                  <p class="stamp">In production · <span class="ver">v1.12.1</span></p>
-                </div>
                 <p>A platform for running small and medium businesses: each one uses the modules it needs, from last-mile delivery to work orders, point of sale and used auto parts, sharing a single record of customers and products. The same phone app serves the driver, the technician and the salesperson. It started with deliveries in Mato Grosso, Brazil, and in October 2026 it replaced the pilot, Logística Local &amp; Rotas.</p>
                 <p class="links"><a class="go" href="https://github.com/sanklerbergman/logistica-local-rotas-case/blob/main/README.en.md">Read the pilot's case study</a></p>
                 <p class="note">Private code. Screenshots use fictitious data in Cuiabá, Brazil. The interface is in Portuguese.</p>
               </div>
+            </div>
+            <figure class="item-media">
+              <picture>
+                <source media="(max-width: 760px)" srcset="../assets/img/painel-inicio-escuro-celular.webp" width="912" height="768">
+                <img src="../assets/img/painel-inicio-escuro.webp" width="1440" height="900" alt="Tropeiro's dashboard home, with live summaries of the company's point of sale, work orders and deliveries" fetchpriority="high">
+              </picture>
+            </figure>
+            <div class="item-body item-more">
               <ul class="lines">
                 <li>Customer PIN and proof of delivery with photo, GPS and an integrity hash, against “marked as delivered, but I never got it”.</li>
                 <li>Live tracking over WhatsApp, routes with vehicle load limits, and invoices (NF-e) checked with the driver's camera.</li>
@@ -98,13 +107,7 @@
                 <li>Pix following the Central Bank standard, and a wallet for self-employed (MEI) drivers.</li>
               </ul>
             </div>
-            <figure class="item-media">
-              <picture>
-                <source media="(max-width: 760px)" srcset="../assets/img/painel-inicio-escuro-celular.webp" width="912" height="768">
-                <img src="../assets/img/painel-inicio-escuro.webp" width="1440" height="900" alt="Tropeiro's dashboard home, with live summaries of the company's point of sale, work orders and deliveries" fetchpriority="high">
-              </picture>
-            </figure>
-            <figure class="item-media-end phones">
+            <figure class="item-media-end phones" tabindex="0" role="region" aria-label="Phone app screens">
               <img src="../assets/img/celular-rastreio-escuro.webp" width="533" height="1129" loading="lazy" alt="Order tracking on the customer's phone, with the PIN that confirms receipt and the driver on the map">
               <img src="../assets/img/celular-os-escuro.webp" width="533" height="1129" loading="lazy" alt="The technician's app with the customer's finger-drawn signature on the work order">
               <img src="../assets/img/celular-pdv-escuro.webp" width="533" height="1129" loading="lazy" alt="A sale recorded on the phone's point of sale, with the receipt, the Pix payment and the button to send the PDF">
@@ -113,12 +116,12 @@
 
           <article class="item" id="scanner" aria-labelledby="title-scanner">
             <p class="item-n" aria-hidden="true">02</p>
-            <div class="item-body">
+            <div class="item-body item-intro">
+              <div class="item-head">
+                <h3 id="title-scanner">Scanner Doc</h3>
+                <p class="stamp">Live · <span class="ver">v3.7.0</span> · open source</p>
+              </div>
               <div class="item-text">
-                <div class="item-head">
-                  <h3 id="title-scanner">Scanner Doc</h3>
-                  <p class="stamp">Live · <span class="ver">v3.7.0</span> · open source</p>
-                </div>
                 <p>Photos, Word files or PDFs become a PDF right in the browser. Nothing leaves the device: no upload, no sign-up, no tracking, and it works offline.</p>
                 <p class="links">
                   <a class="go" href="https://scanner.sankler.com.br/">Open the app</a>
@@ -126,6 +129,14 @@
                 </p>
                 <p class="note">The interface is in Portuguese.</p>
               </div>
+            </div>
+            <figure class="item-media crop-top">
+              <picture>
+                <source media="(max-width: 760px)" srcset="../assets/img/scanner-escuro-celular.webp" width="912" height="1372">
+                <img src="../assets/img/scanner-escuro.webp" width="1280" height="800" loading="lazy" alt="Scanner Doc home screen: a button to choose photos, PDFs or Word files, and the promise that nothing leaves the device">
+              </picture>
+            </figure>
+            <div class="item-body item-more">
               <ul class="lines">
                 <li>Automatic paper cropping with adjustable corners, and a filter that removes shadows and strengthens faint text.</li>
                 <li>Merging, splitting and compressing PDFs, including password-protected ones, and password protection for the new PDF.</li>
@@ -135,14 +146,11 @@
                 <li>PDF/A, the archival format some Brazilian courts require for electronic filings.</li>
               </ul>
             </div>
-            <figure class="item-media crop-top">
-              <img src="../assets/img/scanner-escuro.webp" width="1280" height="800" loading="lazy" alt="Scanner Doc home screen: a button to choose photos, PDFs or Word files, and the promise that nothing leaves the device">
-            </figure>
           </article>
 
           <article class="item item-slim" id="empilhaburguer" aria-labelledby="title-empilhaburguer">
             <p class="item-n" aria-hidden="true">03</p>
-            <div class="item-body">
+            <div class="item-body item-intro">
               <div class="item-head">
                 <h3 id="title-empilhaburguer">EmpilhaBurguer</h3>
                 <p class="stamp">In development</p>
@@ -195,7 +203,7 @@
 
     <footer class="row foot">
       <div class="row-label"><p>© 2026 <span>Sankler Bergman</span></p></div>
-      <div class="foot-text"><p>No cookies. Visits counted by Cloudflare Web Analytics.</p><p class="version">v1.9.0</p></div>
+      <div class="foot-text"><p>No cookies. Visits counted by Cloudflare Web Analytics.</p><p class="version">v1.9.1</p></div>
     </footer>
   </div>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7807c7852e47422086e274342e7d65ed"}'></script><!-- End Cloudflare Web Analytics -->
